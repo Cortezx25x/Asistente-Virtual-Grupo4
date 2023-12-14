@@ -1,0 +1,124 @@
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+h1{
+    font-size: 2.7rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #13c4d4;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.user-message {
+    font-family: 'Arial', sans-serif; 
+    font-size: 18px; 
+    color: #333; 
+    border-radius: 5px; 
+    padding: 15px; 
+    margin: 20px 0; 
+    max-width: 600px; 
+    line-height: 1.6; 
+    text-align: center; 
+}
+.flex-container {
+    display: flex;        
+    justify-content: center; 
+    align-items: center;  
+    height: 100px;   
+}
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 30px; 
+}
+
+.btn-record {
+    border: none;
+    padding: 25px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.btn-record-green {
+    background-color: limegreen;
+}
+
+.btn-record-red {
+    background-color: #dc3545;
+}
+
+.btn-record img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.record-spinner {
+    color: white;
+    width: 30px;
+    height: 30px
+}
+
+.mic-img {
+    width: 5px;
+}
+
+
+#wave-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30%;
+    margin-top: 30%;
+    width: 400px;
+    height: 150px;
+}
+
+.wave {
+    background-color: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;    
+}
+
+.wave.green {
+    background-color: green;
+    animation: wave-animation 1.5s ease-in-out infinite;
+}
+
+.wave.paused {
+    height: 20%; 
+    align-self: center;
+    transition: height 1.5 ease;
+}
+@keyframes wave-animation {
+    0%, 100% {
+        height: 20%;
+    }
+    50% {
+        height: 100%;
+    }
+}
+
+/* You can delay the animation of each bar to create a more dynamic effect */
+.wave:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.wave:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.wave:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.wave:nth-child(5) {
+    animation-delay: 0.4s;
+}
